@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import FechaHoraLocal from "../components/FuncionFecha";
 
+
 export function WeatherApp() {
     const [weatherData, setWeatherData] = useState(false);
 
     const ApiRequest = async (city) => {
         try {
-            const apiKey = "aaec21e9a535fcb78db2ace6e00b045d";
+            const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=es&appid=${apiKey}`;
             const response = await fetch(url);
             const data = await response.json();
