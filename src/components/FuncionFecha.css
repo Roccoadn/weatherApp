@@ -1,0 +1,13 @@
+.time{
+    border-right: 2px solid gray;
+    padding: 0 5px;
+    font-weight: 300;
+}
+
+.day{
+    font-weight: 300;
+}
+
+.date{
+    padding: 0 5px;
+}
